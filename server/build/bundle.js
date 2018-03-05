@@ -94,6 +94,7 @@ var app = (0, _express2.default)();
 app.use(_express2.default.static('public')); // tell express to treat the bundle.js file in public as a static/publically available file
 app.get('*', function (req, res) {
   var store = (0, _createStore2.default)();
+
   res.send((0, _renderer2.default)(req, store));
 });
 
